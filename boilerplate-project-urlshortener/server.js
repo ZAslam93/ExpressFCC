@@ -8,6 +8,8 @@ const mySecret = process.env['DB_KEY']
 const urlparser = require('url');
 const dns = require('dns');
 
+// NOTE : URI key is in an .env apart from this package. 
+// Program will fail to connect to mongoose DB
 // Basic Configuration
 const port = process.env.PORT || 3000;
 mongoose.connect(mySecret, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -27,7 +29,7 @@ app.get('/', function(req, res) {
   res.sendFile(process.cwd() + '/views/index.html');
 });
 
-// Your first API endpoint
+// Endpoints
 app.post("/api/shorturl/", (req, res) => {
   console.log(req.body);
   const bodyurl = req.body.url;

@@ -7,6 +7,8 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const bodyParser = require('body-parser');
 
+// NOTE : URI key is in an .env apart from this package. 
+// Program will fail to connect to mongoose DB
 // Configuration 
 app.use(cors());
 app.use(express.static('public'));

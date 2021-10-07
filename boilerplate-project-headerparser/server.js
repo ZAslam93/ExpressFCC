@@ -21,7 +21,7 @@ app.get("/", function (req, res) {
 });
 
 
-// your first API endpoint... 
+// Endpoints 
 
 app.get("/api/whoami", (req, res) => {
   //console.log(req.headers);
